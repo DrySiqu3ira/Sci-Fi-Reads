@@ -4,8 +4,7 @@
 
 Uma aplicação web interativa para explorar uma coleção curada de livros clássicos e modernos de ficção científica. A interface permite que os usuários descubram novas leituras através de um carrossel de citações e uma funcionalidade de busca dinâmica.
 
-[![Assista ao vídeo](img/thumbnail.png)](img/video.mp4)
-[Assista ao vídeo](img/video.mp4)
+![Descrição da imagem](img/Captura-de-tela.jpeg)
 
 
 
@@ -70,5 +69,6 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 ---
 
 _Este projeto foi desenvolvido como parte da Imersão da Alura._
+
 
 
