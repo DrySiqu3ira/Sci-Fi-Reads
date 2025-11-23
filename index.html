@@ -1,0 +1,108 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma principal do documento como Português do Brasil -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres como UTF-8 para suportar acentos e símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configura a viewport para um design responsivo -->
+    <link rel="stylesheet" href="style.css" /> <!-- Vincula a folha de estilos externa (CSS) -->
+    <title>Sci-Fi</title> <!-- Define o título que aparece na aba do navegador -->
+</head>
+
+<body> <!-- Corpo do documento, onde todo o conteúdo visível é colocado -->
+    <!-- TELA DE INTRODUÇÃO (BLACKHOLE) -->
+    <div id="blackhole"> <!-- Container para a animação inicial de "buraco negro" -->
+        <div class="centerHover"> <!-- Elemento interativo no centro da animação -->
+            <span>ENTER</span> <!-- Texto que convida o usuário a entrar no site -->
+        </div>
+        <canvas id="canvas"></canvas> <!-- Elemento canvas usado para desenhar a animação de partículas -->
+    </div>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header> <!-- Seção do cabeçalho -->
+        <div class="header-title-container"> <!-- Container para o logo e o título principal -->
+            <img src="img/logo.svg" class="header-icon" alt="Logo Sci-Fi Reads" /> <!-- Imagem do logo do site -->
+            <h1>Sci-Fi Reads</h1> <!-- Título principal da página -->
+        </div>
+        <div class="search-container"> <!-- Container para a barra de busca -->
+            <input type="text" id="search-input" placeholder="Digite o título ou termo..." /> <!-- Campo de texto para o usuário digitar a busca -->
+            <button id="botao-limpar-busca" class="hidden" aria-label="Limpar busca">
+                <!-- Botão para limpar o campo de busca, inicialmente oculto -->
+                <svg class="clear-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <!-- Ícone "X" para o botão de limpar -->
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+                <span class="sr-only">Limpar</span> <!-- Texto acessível para leitores de tela -->
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main> <!-- Seção principal do conteúdo da página -->
+        <!-- CARROSSEL DE CITAÇÕES -->
+        <div class="carousel-container"> <!-- Container para o carrossel de citações -->
+            <h2></h2> <!-- Título para o carrossel (preenchido via JS) -->
+            <section class="carousel" id="quotes-carousel"> <!-- Seção que contém os slides do carrossel -->
+                <!-- As citações serão inseridas aqui dinamicamente pelo JavaScript -->
+            </section>
+        </div>
+
+        <!-- CONTAINER DOS CARDS DE LIVROS -->
+        <div class="card-container"> <!-- Container onde os cards dos livros serão exibidos após uma busca -->
+            <!-- Os cards dos livros serão inseridos aqui dinamicamente pelo JavaScript -->
+        </div>
+    </main>
+
+    <!-- RODAPÉ DA PÁGINA -->
+    <footer class="footer"> <!-- Seção do rodapé -->
+        <div class="divisor-tecnologico"></div> <!-- Linha decorativa para separar o conteúdo do rodapé -->
+        <div class="footer-social"> <!-- Container para os ícones de redes sociais -->
+            <a href="https://github.com/DrySiqu3ira" target="_blank" rel="noopener noreferrer" class="share-btn github">
+                <!-- Link para o GitHub -->
+                <svg role="img" class="svg--icon"> <!-- Ícone SVG do GitHub -->
+                    <use xlink:href="#svg--github"></use> <!-- Referencia o símbolo SVG definido abaixo -->
+                </svg>
+                <span class="sr-only">GitHub</span> <!-- Texto acessível para leitores de tela -->
+            </a>
+            <a href="https://www.linkedin.com/in/adrienne-siqueira" target="_blank" rel="noopener noreferrer"
+                class="share-btn linkedin"> <!-- Link para o LinkedIn -->
+                <svg role="img" class="svg--icon"> <!-- Ícone SVG do LinkedIn -->
+                    <use xlink:href="#svg--linkedin"></use> <!-- Referencia o símbolo SVG definido abaixo -->
+                </svg>
+                <span class="sr-only">LinkedIn</span> <!-- Texto acessível para leitores de tela -->
+            </a>
+            <a href="https://www.instagram.com/drysiqu3ira/" target="_blank" rel="noopener noreferrer"
+                class="share-btn instagram"> <!-- Link para o Instagram -->
+                <svg role="img" class="svg--icon"> <!-- Ícone SVG do Instagram -->
+                    <use xlink:href="#svg--instagram"></use> <!-- Referencia o símbolo SVG definido abaixo -->
+                </svg>
+                <span class="sr-only">Instagram</span> <!-- Texto acessível para leitores de tela -->
+            </a>
+        </div>
+        <p>Criador por Adrienne Siqueira</p> <!-- Créditos de criação -->
+    </footer>
+
+    <!-- DEFINIÇÕES DE ÍCONES SVG -->
+    <svg class="svg--source" width="0" height="0" aria-hidden="true">
+        <!-- Container oculto para definir símbolos SVG reutilizáveis -->
+        <symbol id="svg--github" viewBox="0 0 16 16"> <!-- Símbolo para o ícone do GitHub -->
+            <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+            </path>
+        </symbol>
+        <symbol id="svg--linkedin" viewBox="0 0 24 24"> <!-- Símbolo para o ícone do LinkedIn -->
+            <path
+                d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V8h3v11zM6.5 6.73c-.97 0-1.75-.78-1.75-1.75S5.53 3.23 6.5 3.23c.97 0 1.75.78 1.75 1.75S7.47 6.73 6.5 6.73zM20 19h-3v-5.6c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94V19h-3V8h2.88v1.32h.04c.4-.76 1.37-1.55 2.84-1.55 3.04 0 3.6 2 3.6 4.6v5.31z">
+            </path>
+        </symbol>
+        <symbol id="svg--instagram" viewBox="0 0 24 24"> <!-- Símbolo para o ícone do Instagram -->
+            <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.225 1.667-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 1 2.88 0 1.44 1.44 0 0 1-2.88 0z">
+            </path>
+        </symbol>
+    </svg>
+
+    <script src="script.js"></script> <!-- Vincula o arquivo JavaScript que controla a interatividade da página -->
+</body>
+
+</html>

@@ -1,0 +1,906 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
+   ========================================================================== */
+
+/* Permite a animação de propriedades customizadas como --angle */
+@property --angle {
+  syntax: "<angle>"; /* Define o tipo da propriedade como um ângulo */
+  initial-value: 0deg; /* Valor inicial da animação */
+  inherits: false; /* A propriedade não é herdada pelos elementos filhos */
+}
+
+/* --- Fontes --- */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"); /* Fonte principal para textos */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap"); /* Fonte temática para títulos */
+
+/* --- Variáveis de Cor (Custom Properties) --- */
+/* Isso centraliza todas as cores, facilitando a mudança do tema do site. */
+
+:root {
+  /* Cores base do tema Sci-Fi */
+  --preto-espacial: #0a0a0a; /* Cor de fundo principal */
+  --roxo-nebuloso: #6a0dad; /* Cor para gradientes e efeitos */
+  --ultra-violeta: #c780ff; /* Cor de destaque para títulos e elementos importantes */
+  --ciano-galactico: #00ffff; /* Cor secundária de destaque */
+  --branco-estrela: #ffffff; /* Cor para textos e ícones */
+  --dourado-estrela: #ffd700; /* Cor para detalhes e destaques especiais */
+
+  /* Cores de texto e UI */
+  --primary-color: #8ab4f8; /* Cor primária para links e interações */
+  --secondary-color: #e8eaed; /* Cor principal para textos */
+  --tertiary-color: #9aa0a6; /* Cor para textos secundários e placeholders */
+  --bg-color: #202124; /* Cor de fundo alternativa */
+}
+
+/* --- Estilos de Base e Reset --- */
+html {
+  height: 100%; /* Garante que o elemento html ocupe toda a altura da tela */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+}
+
+* {
+  box-sizing: border-box; /* Garante que padding e bordas não alterem a largura final dos elementos */
+}
+
+/* --- Estilo do Corpo da Página --- */
+/* Define a aparência geral, fontes e cor de fundo. */
+
+body {
+  margin: 0; /* Remove a margem padrão */
+  font-family: "Quicksand", sans-serif; /* Define a fonte principal */
+  min-height: 100vh; /* Garante que o corpo ocupe no mínimo toda a altura da viewport */
+  color: var(--secondary-color); /* Define a cor padrão do texto */
+  display: flex; /* Habilita o layout flexível */
+  overflow-x: hidden; /* Evita a rolagem horizontal */
+  flex-direction: column; /* Organiza os filhos em coluna */
+
+  /* Cor de fundo sólida como fallback */
+  background-color: rgba(25, 25, 25, 1); /* Fundo escuro para o tema */
+}
+
+/* ==========================================================================
+   2. LAYOUT PRINCIPAL (HEADER, MAIN, FOOTER)
+   ========================================================================== */
+/* Estilos que definem a estrutura principal e as transições de entrada. */
+
+header {
+  padding: 2.5rem 1rem; /* Espaçamento interno (vertical e horizontal) */
+  display: flex; /* Habilita o layout flexível para alinhar os itens */
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: space-around; /* Distribui os itens com espaço entre eles */
+  position: relative; /* Posição relativa para o contexto de empilhamento (z-index) */
+  top: 0; /* Posição no topo */
+  z-index: 10; /* Garante que o cabeçalho fique sobre outros elementos */
+  gap: 1rem; /* Espaçamento entre os elementos do cabeçalho */
+}
+
+main {
+  max-width: 90rem; /* Largura máxima para o conteúdo */
+  margin: 4rem auto 2rem; /* Aumenta a margem superior para não ficar atrás do header */
+  padding-bottom: 2rem; /* Adiciona um espaçamento na parte inferior para não colar no rodapé */
+  flex-grow: 1; /* Faz com que o main ocupe todo o espaço vertical disponível */
+}
+
+.footer {
+  /* position: relative; */ /* Removido, pois o flexbox já controla o posicionamento */
+  left: 0; /* Alinha à esquerda (relevante se fosse 'absolute' ou 'fixed') */
+  width: 100%; /* Ocupa toda a largura */
+  color: var(--tertiary-color); /* Cor do texto */
+
+  padding: 15px 20px; /* Espaçamento interno (vertical e horizontal) */
+  font-size: 0.8rem; /* Tamanho da fonte */
+  text-align: center; /* Centraliza todo o conteúdo de texto dentro do rodapé */
+}
+
+/* Esconde o conteúdo principal por padrão para o efeito de fade-in inicial */
+header,
+main,
+.footer {
+  opacity: 0; /* Começa transparente */
+  visibility: hidden; /* Começa invisível */
+  transition: opacity 2s ease-in-out, visibility 0s 2s; /* Fade-in de 2s, visibilidade muda no final */
+}
+
+/* ==========================================================================
+   3. TELA DE INTRODUÇÃO (BLACKHOLE)
+   ========================================================================== */
+/* Estilos para a animação de entrada. */
+
+#blackhole {
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Cobre toda a tela */
+  top: 0; /* Alinha no topo */
+  left: 0; /* Alinha à esquerda */
+  display: flex; /* Habilita flexbox */
+  background-color: rgba(25, 25, 25, 1); /* Fundo escuro */
+  z-index: 100; /* Fica acima de todo o conteúdo */
+  transition: opacity 2.5s ease-out; /* Aumenta a duração do fade-out */
+}
+
+.centerHover {
+  width: 255px;
+  height: 255px;
+  background-color: transparent;
+  border-radius: 50%; /* Borda redonda */
+  position: absolute; /* Posicionamento absoluto */
+  left: 50%; /* Centraliza horizontalmente */
+  top: 50%; /* Centraliza verticalmente */
+  margin-top: -128px; /* Ajuste fino para centralização vertical */
+  margin-left: -128px; /* Ajuste fino para centralização horizontal */
+  z-index: 2; /* Fica acima do canvas */
+  cursor: pointer; /* Cursor de mão para indicar interatividade */
+  line-height: 255px; /* Alinha o texto verticalmente */
+  text-align: center; /* Alinha o texto horizontalmente */
+  transition: all 500ms;
+}
+
+.centerHover.open {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.centerHover:hover span {
+  color: #ddd; /* Cor do texto no hover */
+}
+
+.centerHover:hover span:before {
+  background-color: #ddd; /* Cor da linha no hover */
+}
+
+.centerHover:hover span:after {
+  background-color: #ddd;
+}
+
+.centerHover span {
+  color: #666; /* Cor do texto */
+  font-family: serif; /* Fonte do texto */
+  font-size: 18px; /* Tamanho da fonte */
+  position: relative; /* Contexto de posicionamento para os pseudo-elementos */
+  transition: all 500ms;
+}
+
+.centerHover span:before,
+.centerHover span:after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 16px; /* Largura da linha */
+  margin-bottom: 4px; /* Margem inferior */
+  background-color: #666;
+  transition: all 500ms;
+}
+
+canvas {
+  position: absolute; /* Posicionamento absoluto dentro do #blackhole */
+  top: 0; /* Alinha no topo */
+  left: 0; /* Alinha à esquerda */
+  z-index: 1; /* Fica atrás do botão ENTER */
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+   4. COMPONENTES
+   ========================================================================== */
+
+/* --- Cabeçalho e Busca --- */
+/* Container para o ícone e o título no cabeçalho */
+.header-title-container {
+  display: flex; /* Habilita o layout flexível para alinhar os itens internos */
+  align-items: center; /* Alinha o ícone e o título verticalmente */
+  gap: 0.75rem; /* Espaçamento entre o ícone e o título */
+}
+
+/* Estilo do ícone SVG no cabeçalho */
+.header-icon {
+  width: 80px; /* Largura da imagem do logo */
+  height: 80px; /* Altura da imagem do logo */
+  filter: drop-shadow(
+    0 0 4px var(--ciano-galactico)
+  ); /* Adiciona um brilho neon um pouco mais suave */
+}
+
+/* Título principal no cabeçalho */
+header h1 {
+  margin: 0; /* Remove margens padrão do h1 */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  font-family: "Orbitron", sans-serif; /* Define a fonte Sci-Fi */
+  color: var(--ultra-violeta); /* Define a cor de destaque */
+  /* Adiciona um brilho neon mais suave e com duas camadas para profundidade */
+  text-shadow: 0 0 5px rgba(199, 128, 255, 0.6),
+    /* Brilho interno mais nítido */ 0 0 20px rgba(199, 128, 255, 0.3); /* Brilho externo mais difuso */
+}
+
+.search-container {
+  position: relative; /* Necessário para posicionar a linha animada */
+  display: flex; /* Habilita o layout flexível */
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 10px; /* Adiciona um espaço entre o input e o botão */
+}
+
+.input-wrapper {
+  position: relative; /* Contexto de posicionamento para o brilho */
+  display: inline-block; /* Permite que o elemento se ajuste ao conteúdo */
+  padding: 3px; /* Espessura da borda de gradiente */
+  border-radius: 9999em; /* Borda totalmente arredondada */
+  /* Gradiente da borda */
+  background: linear-gradient(
+    21deg,
+    var(--primary-color),
+    var(--ultra-violeta)
+  );
+}
+
+.input-wrapper > input {
+  position: relative; /* Para ficar acima do brilho */
+  display: inherit; /* Herda o display do pai */
+  border-radius: inherit; /* Herda o raio da borda do pai */
+  margin: 0; /* Remove margens */
+  border: none; /* Remove a borda padrão */
+  outline: none; /* Remove a linha de foco padrão */
+  padding: 0 0.75em; /* Espaçamento interno horizontal */
+  height: 45px; /* Altura consistente */
+  width: 30rem; /* Largura do campo */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  background-color: #0a0a0a; /* Preto fosco e opaco para o efeito de vidro */
+  backdrop-filter: blur(
+    10px
+  ); /* Aumenta o desfoque para um efeito "fosco" mais forte */
+  color: var(--branco-estrela); /* Cor do texto digitado */
+  z-index: 1; /* Fica acima do brilho */
+}
+
+#search-input::placeholder {
+  color: var(--tertiary-color);
+  /* Adiciona uma transição suave para a opacidade */
+  transition: opacity 0.3s ease-out;
+}
+
+#search-input.placeholder-fade-out::placeholder {
+  opacity: 0;
+}
+
+/* Elemento span para o efeito de brilho no foco */
+.input-wrapper > span {
+  transform: scale(0.993, 0.94); /* Ajuste fino na escala inicial */
+  transition: transform 0.5s, opacity 0.25s; /* Transições suaves */
+  opacity: 0; /* Escondido por padrão */
+  position: absolute; /* Posicionamento absoluto em relação ao pai */
+  z-index: 0; /* Fica atrás do input */
+  margin: 4px; /* Margem para alinhar com o padding do pai */
+  left: 0; /* Alinha à esquerda */
+  top: 0; /* Alinha ao topo */
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none; /* Permite cliques através do elemento */
+  box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff,
+    3px -3px 30px var(--ultra-violeta), -3px 3px 30px var(--primary-color);
+}
+
+/* Mostra o brilho quando o input está focado */
+.input-wrapper > input:focus + span {
+  opacity: 1; /* Torna o brilho visível */
+  transform: scale(1); /* Retorna à escala normal */
+}
+
+/* --- Botões e Controles --- */
+/* Estilos para o botão de limpar busca e o de controle da animação. */
+
+#botao-limpar-busca {
+  /* Ajustes para um botão de ícone */
+  width: 55px; /* Largura fixa */
+  height: 55px; /* Altura fixa (para ficar redondo) */
+  padding: 0; /* Remove o padding para controlar o tamanho com width/height */
+  display: flex; /* Habilita flexbox */
+  align-items: center; /* Centraliza o ícone verticalmente */
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+
+  margin: 10px; /* Margem externa */
+  /* Transições para o fundo e para o surgimento suave */
+  transition: background-position 0.5s, opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  opacity: 1; /* Garante que ele comece visível (JS controla o estado 'escondido') */
+  transform: scale(1); /* Estado normal */
+
+  background-size: 200% auto; /* Tamanho do gradiente de fundo */
+  color: white; /* Cor do texto */
+  box-shadow: 0 0 10px rgba(199, 128, 255, 0.2); /* Sombra alinhada com a cor do projeto */
+  border-radius: 50%; /* Deixa o botão perfeitamente redondo */
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  background-image: linear-gradient(
+    to right,
+    var(--roxo-nebuloso) 0%,
+    var(--ultra-violeta) 51%,
+    var(--roxo-nebuloso) 100%
+  );
+  /* Aplica a animação de pulsação sutil apenas no brilho */
+  animation: pulse-glow-shadow 2.5s infinite ease-in-out;
+}
+
+.clear-icon {
+  width: 28px; /* Largura do ícone */
+  height: 28px; /* Altura do ícone */
+  fill: var(--branco-estrela); /* Garante que o ícone seja branco */
+  fill: currentColor; /* O ícone terá a mesma cor do texto do botão (branco) */
+}
+
+#botao-limpar-busca:hover {
+  background-position: right center; /* Muda a posição do gradiente para criar o efeito de movimento */
+  color: #fff; /* Cor do texto no hover */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+#botao-limpar-busca:active {
+  transform: scale(
+    0.98
+  ); /* Diminui levemente o tamanho para dar feedback de clique */
+}
+
+.animation-control-btn {
+  -webkit-tap-highlight-color: transparent; /* Remove o destaque de toque no iOS */
+  position: absolute; /* Posicionamento absoluto */
+  top: 1rem; /* Distância do topo */
+  right: 1rem; /* Distância da direita */
+  border: 0; /* Remove a borda */
+  width: 45px; /* Largura */
+  height: 45px; /* Altura */
+  border-radius: 50%; /* Borda redonda */
+  /* Sombra e fundo que imitam um botão 3D */
+  background-color: #2a2a2e;
+  box-shadow: inset 0 3px 6px 0 rgba(0, 0, 0, 0.375),
+    0 1px 0 0 rgba(255, 255, 255, 0.1);
+  transition: 0.5s ease; /* Transição suave */
+  cursor: pointer; /* Cursor de mão */
+  z-index: 20; /* Garante que fique acima de outros elementos */
+}
+
+.animation-control-btn:focus {
+  outline: 0;
+}
+
+.animation-control-btn::before {
+  position: absolute;
+  content: ""; /* Conteúdo vazio */
+  display: block; /* Exibição em bloco */
+  border-radius: 50%; /* Borda redonda */
+  width: 70%; /* Largura */
+  height: 70%; /* Altura */
+  top: 15%; /* Posição */
+  left: 15%; /* Posição */
+  background-image: linear-gradient(to bottom, #3a3a3f, #1f1f21); /* Gradiente de fundo */
+  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.375),
+    inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+}
+
+.animation-control-btn::after {
+  position: absolute;
+  content: ""; /* Conteúdo vazio */
+  display: block; /* Exibição em bloco */
+  border-radius: 50%; /* Borda redonda */
+  width: 40%; /* Largura */
+  height: 40%; /* Altura */
+  top: 30%; /* Posição */
+  left: 30%; /* Posição */
+  background-image: linear-gradient(to bottom, #252528, #2c2c31);
+  box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
+    inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.animation-control-btn span {
+  display: block;
+  position: absolute; /* Posicionamento absoluto */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste fino para centralização */
+  transition: 0.25s ease;
+  z-index: 1;
+}
+
+.animation-control-btn span::before,
+.animation-control-btn span::after {
+  position: absolute; /* Posicionamento absoluto */
+  content: ""; /* Conteúdo vazio */
+  width: 4px; /* Largura da barra */
+  height: 14px; /* Altura da barra */
+  top: 50%; /* Alinha verticalmente */
+  background-color: var(--ultra-violeta); /* Cor da barra */
+  box-shadow: inset 1px -1px 2px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-50%); /* Ajuste fino para centralização vertical */
+  border-radius: 99em; /* Borda arredondada */
+  transition: 0.25s ease;
+}
+
+.animation-control-btn span::before {
+  left: -5px; /* Posição da barra esquerda */
+}
+
+.animation-control-btn span::after {
+  left: 1px; /* Posição da barra direita */
+}
+
+/* --- Cards de Livros --- */
+.card-container {
+  display: grid; /* Usa layout de grade */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas responsivas */
+  gap: 2rem; /* Espaçamento entre os cards */
+  justify-items: stretch; /* Estica os itens para preencher a célula da grade */
+  width: min(100% - 2rem, 90rem); /* Largura responsiva com um máximo */
+  margin-inline: auto; /* Centraliza horizontalmente */
+  padding: 1rem; /* Espaçamento interno */
+}
+
+article {
+  /* Variáveis para o efeito neon */
+  --animation-duration: 6s;
+  --border-width: 3px;
+  --glow-offset: -15px;
+  --border-radius: 1rem;
+
+  position: relative; /* Necessário para o posicionamento dos pseudo-elementos */
+  border: solid var(--border-width) transparent; /* Borda transparente para o efeito neon */
+  border-radius: var(--border-radius); /* Raio da borda */
+  min-height: 290px; /* Altura mínima para os cards (reduzida) */
+
+  /* Fundo sólido para os cards para garantir a legibilidade do texto */
+  background-color: #111113;
+
+  /* Aplica a animação de entrada suave ao aparecer */
+  animation: card-fade-in 0.5s ease-out forwards;
+}
+
+article:nth-child(4n + 1) {
+  --neon-clr: var(--ultra-violeta);
+}
+article:nth-child(4n + 2) {
+  --neon-clr: var(--primary-color);
+}
+article:nth-child(4n + 3) {
+  --neon-clr: var(--dourado-estrela);
+}
+article:nth-child(4n + 4) {
+  --neon-clr: var(--primary-color);
+}
+
+.card-content {
+  position: relative; /* Para o z-index funcionar */
+  z-index: 2; /* Garante que o conteúdo fique acima dos efeitos */
+  display: grid; /* Usa layout de grade */
+  grid-template-rows: auto 1fr auto; /* Organiza título, sinopse e link */
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.card-content::before {
+  content: "";
+  position: absolute; /* Posicionamento absoluto */
+  inset: 0; /* Ocupa todo o espaço do pai */
+  background: linear-gradient(to bottom, var(--neon-clr), transparent); /* Gradiente de cor */
+  opacity: 0.4; /* Opacidade do gradiente */
+  z-index: -1; /* Fica atrás do texto, mas dentro do card */
+  border-radius: var(--border-radius);
+}
+
+article h2 {
+  margin-top: 1; /* Remove margem do topo */
+  font-family: "Orbitron", sans-serif; /* Fonte Sci-Fi */
+  color: var(--branco-estrela);
+  text-shadow: 1px 1px 2px var(--neon-clr); /* Sombra com a cor neon */
+}
+
+article p {
+  text-shadow: 0 0 3px black; /* Sombra para melhorar a legibilidade */
+  font-size: 0.9rem; /* Tamanho da fonte */
+  line-height: 1.9; /* Altura da linha */
+}
+
+article a {
+  background-color: var(--neon-clr); /* Usa a cor neon do card */
+  color: #0a0a0a; /* Texto escuro para contraste */
+  font-size: 0.8rem; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte */
+  text-transform: lowercase; /* Texto em minúsculas */
+  width: 100px; /* Largura inicial */
+  padding: 0.4rem 0.5rem; /* Espaçamento interno */
+  text-decoration: none; /* Remove o sublinhado */
+  text-align: center; /* Alinhamento do texto */
+  transition: 150ms ease-in-out; /* Transição suave */
+  border: 1px solid transparent; /* Borda inicial transparente para transição suave */
+  border-radius: 4px;
+}
+
+article a:hover {
+  width: 100%; /* Expande o botão ao passar o mouse */
+  box-shadow: 0 0 10px var(--neon-clr);
+}
+
+/* Efeitos de borda e brilho neon para os cards */
+/* Cria a borda animada */
+article::before {
+  content: ""; /* Conteúdo vazio para o pseudo-elemento */
+  position: absolute; /* Posicionamento absoluto */
+  inset: calc(var(--border-width) * -1); /* Posiciona fora do card para criar a borda */
+  border: inherit; /* Herda a borda do pai */
+  border-radius: inherit; /* Herda o raio da borda do pai */
+  background: conic-gradient(
+      from var(--angle),
+      var(--neon-clr) 40%,
+      transparent,
+      var(--neon-clr) 60%
+    )
+    border-box; /* Gradiente cônico para a borda */
+  mask: conic-gradient(yellow 0 0) subtract,
+    conic-gradient(yellow 0 0) padding-box; /* Máscara para criar o efeito de borda */
+  opacity: 0.8;
+  z-index: 1;
+  animation: neon-rotate var(--animation-duration) linear infinite;
+}
+
+article::after {
+  content: "";
+  inset: var(--glow-offset); /* Deslocamento do brilho */
+  position: absolute; /* Posicionamento absoluto */
+  z-index: -2; /* Fica atrás de tudo */
+  background-color: var(--neon-clr); /* Cor de fundo */
+  background: conic-gradient(
+    from var(--angle),
+    var(--neon-clr),
+    transparent,
+    var(--neon-clr)
+  ); /* Gradiente cônico para o brilho */
+  border-radius: 20px;
+  filter: blur(15px);
+  opacity: 0.8;
+  animation: neon-rotate var(--animation-duration) linear infinite;
+}
+
+/* --- Carrossel de Citações --- */
+.carousel-container {
+  width: 100%;
+  display: flex; /* Habilita flexbox */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 1rem; /* Espaçamento entre o título e o carrossel */
+  margin-bottom: 2rem;
+  /* Aplica a animação de entrada suave */
+  animation: card-fade-in 0.75s ease-in-out forwards;
+}
+
+.carousel-container h2 {
+  font-family: "Orbitron", sans-serif;
+  color: var(--ultra-violeta); /* Cor do título */
+  text-shadow: 0 0 10px rgba(199, 128, 255, 0.5); /* Sombra de texto neon */
+  font-size: 1.8rem; /* Tamanho da fonte */
+  margin: 0; /* Remove margens */
+}
+
+.carousel {
+  --transition-duration: 750ms;
+  --card-width: 500px;
+  --card-height: 250px;
+  --nav-btn-size: 40px;
+  --nav-btn-bg: transparent;
+  --nav-btn-bg-hover: rgba(106, 13, 173, 0.5);
+  --nav-btn-font-size: 1.4rem;
+  --nav-btn-txt: var(--ciano-galactico);
+  --nav-btn-txt-hover: var(--branco-estrela);
+  --nav-marker-size: 14px;
+  --nav-marker-bg: transparent;
+  --nav-marker-bg-active: var(
+    --ultra-violeta
+  ); /* Alinhado com a cor principal */
+
+  width: min(calc(100% - 2rem), 1200px);
+  list-style: none;
+  padding: 1.5rem; /* Adiciona o espaçamento interno aqui */
+  margin: 0;
+  display: grid; /* Habilita o grid para centralizar o conteúdo */
+  position: relative;
+  /* A altura se ajustará ao conteúdo, com uma transição suave e um pequeno atraso */
+  transition: height 0.5s ease-in-out 0.25s;
+}
+
+.carousel > * {
+  position: absolute; /* Empilha todos os slides */
+  grid-area: 1 / 1; /* Faz com que todos os slides ocupem a mesma célula do grid */
+  top: 0;
+  left: 0; /* Alinha no topo e à esquerda */
+  width: 100%;
+  opacity: 0; /* Começam invisíveis */
+  transition: opacity 0.5s ease-in-out; /* Animação de fade */
+  pointer-events: none; /* Não são clicáveis quando invisíveis */
+}
+
+.carousel > *.scroll-start {
+  scroll-initial-target: nearest;
+}
+
+.carousel > .active {
+  opacity: 1; /* Slide ativo fica visível */
+  pointer-events: auto; /* Slide ativo se torna interativo */
+  position: relative; /* Garante que o slide ativo ocupe espaço */
+}
+
+.carousel blockquote > div {
+  width: 100%; /* Ocupa toda a largura do container do carrossel */
+  height: 100%; /* Ocupa 100% da altura do pai */
+  overflow: hidden; /* Esconde conteúdo que transborda */
+  display: grid; /* Usa layout de grade */
+  grid-template-rows: 1fr auto; /* Duas linhas, a primeira cresce e a segunda se ajusta */
+  padding: 0; /* Remove o padding interno para alinhar com a borda do container pai */
+  background-color: rgba(10, 10, 10, 0.6); /* Fundo semi-transparente */
+  backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+  border-radius: 8px; /* Um pouco menor para caber dentro do container */
+  padding: 1.5rem;
+}
+
+.carousel > * > div > p {
+  margin: 0;
+  transition: all var(--transition-duration) ease-in-out
+    calc(var(--transition-duration) * 0.5); /* Transição com atraso */
+  align-self: center; /* Alinha verticalmente no centro da célula da grade */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-style: italic; /* Estilo da fonte */
+  text-shadow: 0 0 3px black;
+  padding: 0 1rem;
+}
+
+.carousel > * > div > cite {
+  margin: 0;
+  text-align: right;
+  transition: all var(--transition-duration)
+    calc(var(--transition-duration) * 1); /* Transição com atraso */
+  font-size: 0.9rem;
+  font-family: "Orbitron", sans-serif;
+  color: var(--ultra-violeta); /* Alinhado com a cor principal do carrossel */
+  padding: 0 1rem 0.5rem;
+}
+
+/* --- Rodapé e Ícones Sociais --- */
+
+.footer-social {
+  display: flex; /* Habilita flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 1rem; /* Espaçamento entre os ícones */
+  margin-top: 1.5rem; /* Margem superior */
+  padding: 1rem; /* Espaçamento interno */
+}
+
+.share-btn {
+  width: 3.5rem; /* Largura */
+  height: 3.5rem; /* Altura */
+  display: flex; /* Habilita flexbox */
+  align-items: center; /* Alinha o ícone verticalmente */
+  justify-content: center;
+  color: var(--tertiary-color);
+  border: 2px solid var(--tertiary-color);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: color 250ms, border-color 250ms, box-shadow 250ms, transform 250ms;
+}
+
+.share-btn:hover,
+.share-btn:focus {
+  transform: scale(1.1); /* Aumenta o tamanho no hover */
+  outline: none; /* Remove a linha de foco */
+}
+
+.share-btn .svg--icon {
+  width: 1.75rem; /* Largura do ícone SVG */
+  height: 1.75rem; /* Altura do ícone SVG */
+  fill: currentColor;
+}
+
+.github:hover,
+.github:focus {
+  color: var(--branco-estrela);
+  border-color: var(--branco-estrela);
+  box-shadow: 0 0 15px 0 var(--branco-estrela);
+}
+
+.linkedin:hover,
+.linkedin:focus {
+  color: #0a66c2;
+  border-color: #0a66c2;
+  box-shadow: 0 0 15px 0 #0a66c2;
+}
+
+.instagram:hover,
+.instagram:focus {
+  color: #e4405f;
+  border-color: #e4405f;
+  box-shadow: 0 0 15px 0 #e4405f;
+}
+
+/* ==========================================================================
+   5. CLASSES UTILITÁRIAS E EFEITOS
+   ========================================================================== */
+
+.divisor-tecnologico {
+  width: 80%; /* Largura de 80% do pai */
+  height: 3px; /* Altura */
+  margin: 30px auto; /* Centraliza e adiciona espaçamento vertical */
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--ultra-violeta),
+    /* Alinhado com a cor principal */ transparent
+  ); /* Gradiente que cria o efeito de brilho no centro */
+  box-shadow: 0 0 5px var(--ultra-violeta); /* Sombra alinhada com a cor principal */
+}
+
+.is-background {
+  position: fixed !important; /* Posição fixa para ficar no fundo */
+  top: 0; /* Alinha no topo */
+  left: 0; /* Alinha à esquerda */
+  z-index: -1 !important; /* Fica atrás de todo o conteúdo */
+}
+
+/* Animação que rotaciona o ângulo do gradiente cônico */
+@keyframes neon-rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Classe para aplicar cor de destaque a ícones ou textos */
+.icone-acento {
+  color: var(--ultra-violeta); /* Alinhado com a cor principal */
+}
+
+/* Classe para esconder conteúdo visualmente, mas mantê-lo para leitores de tela */
+.sr-only {
+  position: absolute; /* Remove do fluxo normal */
+  width: 1px; /* Largura mínima */
+  height: 1px; /* Altura mínima */
+  padding: 0; /* Remove preenchimento */
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.escondido {
+  opacity: 0 !important; /* Fica transparente */
+  transform: scale(
+    0.9
+  ) !important; /* Diminui um pouco para um efeito de encolhimento */
+  pointer-events: none !important; /* Impede que seja clicado quando invisível */
+  visibility: hidden !important; /* Esconde de leitores de tela e remove da interação */
+}
+
+.mensagem-container {
+  grid-column: 1 / -1; /* Faz a mensagem ocupar todas as colunas da grade dos cards */
+  padding: 3rem; /* Espaçamento interno */
+  display: flex; /* Habilita flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  text-align: center;
+}
+
+.mensagem-nenhum-resultado {
+  color: var(--branco-estrela);
+  font-size: 1rem; /* Tamanho da fonte */
+}
+
+.svg--source {
+  display: none;
+}
+
+/* ==========================================================================
+   6. ANIMAÇÕES (KEYFRAMES)
+   ========================================================================== */
+
+@keyframes card-fade-in {
+  from {
+    opacity: 0; /* Começa transparente */
+    transform: translateY(20px); /* Começa 20px abaixo */
+  }
+  to {
+    opacity: 1; /* Termina opaco */
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow-shadow {
+  0% {
+    box-shadow: 0 0 10px rgba(199, 128, 255, 0.3); /* Sombra inicial */
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(199, 128, 255, 0.6); /* Sombra no meio da animação */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(199, 128, 255, 0.3); /* Sombra final */
+  }
+}
+
+@keyframes neon-rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Empilha o título e a busca */
+    padding: 1rem; /* Reduz o espaçamento */
+  }
+
+  .card-container {
+    gap: 2rem; /* Espaçamento entre os cards */
+  }
+
+  header h1 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 1rem; /* Adiciona margem abaixo do título */
+  }
+
+  #search-input {
+    width: 100%; /* Faz o input ocupar todo o espaço do seu container */
+    max-width: 500px; /* Limita a largura máxima */
+    font-size: 1.2rem; /* Reduz o tamanho da fonte */
+  }
+  .carousel {
+    --card-width: 380px;
+    --card-height: 220px;
+  }
+
+  main {
+    padding: 1rem; /* Espaçamento interno */
+  }
+
+  /* Desativa a animação em dispositivos que preferem movimento reduzido */
+  @media (prefers-reduced-motion: reduce) {
+    article::before,
+    article::after {
+      animation: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1rem; /* Tamanho da fonte do título */
+    max-width: 70%; /* Limita a largura para evitar quebras estranhas */
+    word-wrap: break-word; /* Permite que o texto quebre */
+  }
+
+  #search-input {
+    width: 90vw; /* Ocupa 90% da largura da viewport */
+    font-size: 1rem;
+  }
+
+  article h2 {
+    font-size: 1.3rem; /* Reduz a fonte do título do card */
+  }
+
+  .carousel-container h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  } /* Tamanho da fonte do título do carrossel */
+
+  .search-container {
+    width: 100%; /* Faz o container ocupar toda a largura */
+    flex-direction: column; /* Empilha o campo de busca e o botão */
+    gap: 0.5rem; /* Espaçamento entre eles */
+  }
+
+  .footer {
+    display: none; /* Oculta o rodapé para economizar espaço vertical */
+  }
+}

@@ -1,0 +1,771 @@
+[
+  {
+    "titulo": "O Guia do Mochileiro das Galáxias",
+    "autor": "Douglas Adams",
+    "sinopse": "A história de Arthur Dent, que foge da Terra com seu amigo Ford Prefect momentos antes de sua demolição para dar lugar a uma via expressa hiperespacial.",
+    "ano_publicacao": "1979",
+    "link_goodreads": "https://www.goodreads.com/book/show/386162.The_Hitchhiker_s_Guide_to_the_Galaxy",
+    "citacao": "Não entre em pânico.",
+    "tags": [
+      "comédia",
+      "space opera",
+      "clássico"
+    ]
+  },
+  {
+    "titulo": "1984",
+    "autor": "George Orwell",
+    "sinopse": "Um romance distópico sobre um futuro onde um governo totalitário vigia todos os cidadãos e a liberdade individual é considerada um crime.",
+    "ano_publicacao": "1949",
+    "link_goodreads": "https://www.goodreads.com/book/show/61439040-1984",
+    "citacao": "Guerra é paz. Liberdade é escravidão. Ignorância é força.",
+    "tags": [
+      "distopia",
+      "clássico",
+      "política",
+      "ficção social"
+    ]
+  },
+  {
+    "titulo": "Admirável Mundo Novo",
+    "autor": "Aldous Huxley",
+    "sinopse": "Descreve uma sociedade futura onde os habitantes são pré-condicionados biologicamente e psicologicamente para viver em uma harmonia superficial.",
+    "ano_publicacao": "1932",
+    "link_goodreads": "https://www.goodreads.com/book/show/5129.Brave_New_World",
+    "citacao": "As palavras podem ser como raios-X, se você as usar direito: atravessam tudo.",
+    "tags": [
+      "distopia",
+      "clássico",
+      "ficção social"
+    ]
+  },
+  {
+    "titulo": "Fahrenheit 451",
+    "autor": "Ray Bradbury",
+    "sinopse": "Retrata uma sociedade distópica onde os bombeiros têm a função de queimar livros para suprimir o pensamento crítico e a individualidade.",
+    "ano_publicacao": "1953",
+    "link_goodreads": "https://www.goodreads.com/book/show/13079982-fahrenheit-451",
+    "citacao": "É uma boa coisa a se fazer, queimar livros. Mas o mundo está cheio de gente que corre por aí com fósforos acesos.",
+    "tags": [
+      "distopia",
+      "clássico",
+      "censura"
+    ]
+  },
+  {
+    "titulo": "Eu, Robô",
+    "autor": "Isaac Asimov",
+    "sinopse": "Uma coletânea de contos que explora a evolução dos robôs positrônicos e introduz as famosas Três Leis da Robótica.",
+    "ano_publicacao": "1950",
+    "link_goodreads": "https://www.goodreads.com/book/show/41804.I_Robot",
+    "citacao": "Um robô não pode ferir um ser humano ou, por inação, permitir que um ser humano sofra algum mal.",
+    "tags": [
+      "robótica",
+      "inteligência artificial",
+      "clássico",
+      "contos"
+    ]
+  },
+  {
+    "titulo": "Duna",
+    "autor": "Frank Herbert",
+    "sinopse": "Considerado o livro de ficção científica mais vendido da história, narra a disputa por um recurso valioso em um império intergaláctico feudal.",
+    "ano_publicacao": "1965",
+    "link_goodreads": "https://www.goodreads.com/book/show/44767458-dune",
+    "citacao": "O medo é o assassino da mente.",
+    "tags": [
+      "space opera",
+      "clássico",
+      "política",
+      "ecologia"
+    ]
+  },
+  {
+    "titulo": "Neuromancer",
+    "autor": "William Gibson",
+    "sinopse": "Obra precursora e definidora do gênero cyberpunk, aborda temas como inteligência artificial, ciberespaço e corporações poderosas.",
+    "ano_publicacao": "1984",
+    "link_goodreads": "https://www.goodreads.com/book/show/6088007-neuromancer",
+    "citacao": "O céu sobre o porto tinha a cor de uma televisão sintonizada em um canal morto.",
+    "tags": [
+      "cyberpunk",
+      "inteligência artificial",
+      "clássico"
+    ]
+  },
+  {
+    "titulo": "Fundação",
+    "autor": "Isaac Asimov",
+    "sinopse": "Narra o declínio de um vasto Império Galáctico e os esforços de um grupo de cientistas para preservar o conhecimento humano através da psico-história.",
+    "ano_publicacao": "1951",
+    "link_goodreads": "https://www.goodreads.com/book/show/29579.Foundation",
+    "citacao": "A violência é o último refúgio do incompetente.",
+    "tags": [
+      "space opera",
+      "clássico",
+      "império galáctico",
+      "ficção social"
+    ]
+  },
+  {
+    "titulo": "Fim da Infância",
+    "autor": "Arthur C. Clarke",
+    "sinopse": "A chegada pacífica dos Overlords, uma raça alienígena que supervisiona a Terra, põe fim às guerras e à pobreza, mas esconde um plano misterioso para o futuro da humanidade.",
+    "ano_publicacao": "1953",
+    "link_goodreads": "https://www.goodreads.com/book/show/41499.Childhood_s_End",
+    "citacao": "As estrelas não são para o homem.",
+    "tags": [
+      "primeiro contato",
+      "evolução",
+      "ficção científica clássica",
+      "utopia"
+    ]
+  },
+  {
+    "titulo": "O Marciano",
+    "autor": "Andy Weir",
+    "sinopse": "O astronauta Mark Watney é dado como morto após uma tempestade e abandonado em Marte. Ele deve usar sua engenhosidade para sobreviver sozinho e encontrar uma maneira de sinalizar à Terra que ainda está vivo.",
+    "ano_publicacao": "2011",
+    "link_goodreads": "https://www.goodreads.com/book/show/18007564-the-martian",
+    "citacao": "Vou ter que usar a ciência para resolver isso.",
+    "tags": [
+      "ficção científica hard",
+      "sobrevivência",
+      "exploração espacial",
+      "engenharia"
+    ]
+  },
+  {
+    "titulo": "Ubik",
+    "autor": "Philip K. Dick",
+    "sinopse": "Em um mundo onde a morte não é o fim, Joe Chip, um técnico endividado, investiga um atentado contra seu empregador, Glen Runciter. A realidade começa a se desintegrar ao seu redor, forçando-o a confiar em um misterioso produto chamado Ubik.",
+    "ano_publicacao": "1969",
+    "link_goodreads": "https://www.goodreads.com/book/show/22538.Ubik",
+    "tags": [
+      "realidade distorcida",
+      "ficção psicodélica",
+      "anti-morte",
+      "realidade simulada"
+    ]
+  },
+  {
+    "titulo": "Snow Crash",
+    "autor": "Neal Stephenson",
+    "sinopse": "No futuro anárquico da América, o entregador de pizza e hacker Hiro Protagonist mergulha no Metaverso para investigar um vírus de computador perigoso que pode causar danos tanto no mundo digital quanto no real.",
+    "ano_publicacao": "1992",
+    "link_goodreads": "https://www.goodreads.com/book/show/40620868-snow-crash",
+    "tags": [
+      "cyberpunk",
+      "metaverso",
+      "linguística",
+      "distopia"
+    ]
+  },
+  {
+    "titulo": "Trilogia Marciana: Vermelho de Marte",
+    "autor": "Kim Stanley Robinson",
+    "sinopse": "A primeira nave com 100 colonos é enviada para colonizar Marte. O livro acompanha a luta entre facções que desejam terraformar o planeta rapidamente e aquelas que querem preservar sua paisagem intocada.",
+    "ano_publicacao": "1992",
+    "link_goodreads": "https://www.goodreads.com/book/show/77507.Red_Mars",
+    "tags": [
+      "ficção científica hard",
+      "colonização",
+      "terraformação",
+      "política espacial"
+    ]
+  },
+  {
+    "titulo": "A Mão Esquerda da Escuridão",
+    "autor": "Ursula K. Le Guin",
+    "sinopse": "Genly Ai, um enviado da Ekumen, viaja para o planeta Gethen, onde os habitantes são andróginos e só assumem um sexo durante um período de cio chamado 'kemmer'. Seu objetivo é persuadir o planeta a se juntar à comunidade galáctica.",
+    "ano_publicacao": "1969",
+    "link_goodreads": "https://www.goodreads.com/book/show/18423.The_Left_Hand_of_Darkness",
+    "citacao": "A luz é a mão esquerda da escuridão, e a escuridão é a mão direita da luz.",
+    "tags": [
+      "ficção social",
+      "gênero",
+      "antropologia",
+      "exploração"
+    ]
+  },
+  {
+    "titulo": "Contato",
+    "autor": "Carl Sagan",
+    "sinopse": "A cientista Ellie Arroway dedica sua vida à busca por inteligência extraterrestre. Quando um sinal complexo é captado, contendo instruções para a construção de uma máquina, a humanidade deve decidir se deve confiar e seguir em frente.",
+    "ano_publicacao": "1985",
+    "link_goodreads": "https://www.goodreads.com/book/show/61666.Contact",
+    "citacao": "Se somos só nós... parece um grande desperdício de espaço.",
+    "tags": [
+      "primeiro contato",
+      "astrofísica",
+      "filosofia",
+      "SETI"
+    ]
+  },
+  {
+    "titulo": "Encontro com Rama",
+    "autor": "Arthur C. Clarke",
+    "sinopse": "Um colossal objeto cilíndrico, batizado de Rama, entra no sistema solar. Uma missão de exploração é enviada para investigar esta nave alienígena, descobrindo um ecossistema artificial e enigmático em seu interior.",
+    "ano_publicacao": "1973",
+    "link_goodreads": "https://www.goodreads.com/book/show/11255.Rendezvous_with_Rama",
+    "tags": [
+      "ficção científica hard",
+      "exploração espacial",
+      "artefato alienígena",
+      "mistério"
+    ]
+  },
+  {
+    "titulo": "O Homem do Castelo Alto",
+    "autor": "Philip K. Dick",
+    "sinopse": "Um mundo alternativo onde as Potências do Eixo venceram a Segunda Guerra Mundial e dividiram os Estados Unidos. A vida sob o domínio japonês e nazista é retratada, enquanto um livro proibido circula, narrando uma história onde os Aliados venceram.",
+    "ano_publicacao": "1962",
+    "link_goodreads": "https://www.goodreads.com/book/show/2141.The_Man_in_the_High_Castle",
+    "citacao": "A verdade, ele pensou, é que não há verdade.",
+    "tags": [
+      "história alternativa",
+      "distopia",
+      "guerra mundial",
+      "metaficção"
+    ]
+  },
+  {
+    "titulo": "Hyperion",
+    "autor": "Dan Simmons",
+    "sinopse": "Sete peregrinos, cada um carregando uma dor profunda e um segredo terrível, viajam para o planeta Hyperion para confrontar o Shrike, uma criatura metálica mítica, antes que uma guerra galáctica destrua a humanidade.",
+    "ano_publicacao": "1989",
+    "link_goodreads": "https://www.goodreads.com/book/show/77566.Hyperion",
+    "tags": [
+      "ópera espacial",
+      "ficção científica épica",
+      "religião",
+      "inteligência artificial"
+    ]
+  },
+  {
+    "titulo": "Justiça Auxiliar",
+    "autor": "Ann Leckie",
+    "sinopse": "Breq era uma nave de guerra com milhares de corpos 'auxiliares' sob controle de sua inteligência artificial. Agora, reduzida a um único corpo humano, Breq busca vingança contra o Lorde do Gênero, responsável por sua destruição.",
+    "ano_publicacao": "2013",
+    "link_goodreads": "https://www.goodreads.com/book/show/17333324-ancillary-justice",
+    "tags": [
+      "ópera espacial",
+      "inteligência artificial",
+      "gênero",
+      "ficção militar"
+    ]
+  },
+  {
+    "titulo": "Matadouro Cinco",
+    "autor": "Kurt Vonnegut",
+    "sinopse": "Billy Pilgrim, um soldado americano que se torna um oftalmologista, é 'desancorado' no tempo, experimentando sua vida e a de outros em ordem aleatória, incluindo o bombardeio de Dresden na Segunda Guerra Mundial e sua captura por alienígenas.",
+    "ano_publicacao": "1969",
+    "link_goodreads": "https://www.goodreads.com/book/show/4981.Slaughterhouse_Five",
+    "citacao": "Tudo aconteceu, mais ou menos.",
+    "tags": [
+      "viagem no tempo",
+      "anti-guerra",
+      "ficção especulativa",
+      "alienígenas"
+    ]
+  },
+  {
+    "titulo": "Androides Sonham com Ovelhas Elétricas?",
+    "autor": "Philip K. Dick",
+    "sinopse": "Em um futuro pós-apocalíptico, Rick Deckard é um caçador de recompensas que deve 'aposentar' androides de última geração que se parecem e agem exatamente como humanos, enquanto questiona o que significa ser empático.",
+    "ano_publicacao": "1968",
+    "link_goodreads": "https://www.goodreads.com/book/show/7082.Do_Androids_Dream_of_Electric_Sheep_",
+    "citacao": "A maioria dos androides que eu conheci tinha mais vontade de viver do que os seus donos.",
+    "tags": [
+      "cyberpunk",
+      "inteligência artificial",
+      "identidade",
+      "distopia"
+    ]
+  },
+  {
+    "titulo": "A Guerra Eterna",
+    "autor": "Joe Haldeman",
+    "sinopse": "Um soldado convocado para uma guerra interestelar distante, onde o efeito da dilatação do tempo faz com que a cada missão ele retorne a uma Terra que progrediu décadas, deixando-o cada vez mais deslocado em seu próprio tempo.",
+    "ano_publicacao": "1974",
+    "link_goodreads": "https://www.goodreads.com/book/show/2161.The_Forever_War",
+    "tags": [
+      "ficção militar",
+      "dilatação do tempo",
+      "anti-guerra",
+      "futuro distante"
+    ]
+  },
+  {
+    "titulo": "Os Despossuídos",
+    "autor": "Ursula K. Le Guin",
+    "sinopse": "Shevek, um físico de um planeta anarquista e utópico chamado Anarres, viaja para Urras, o planeta capitalista e opulento de onde seu povo se separou, em busca de unificar o conhecimento e derrubar barreiras ideológicas.",
+    "ano_publicacao": "1974",
+    "link_goodreads": "https://www.goodreads.com/book/show/13654.The_Dispossessed",
+    "tags": [
+      "ficção social",
+      "utopia",
+      "anarquismo",
+      "colonização"
+    ]
+  },
+  {
+    "titulo": "O Senhor da Luz",
+    "autor": "Roger Zelazny",
+    "sinopse": "Em um planeta colonizado, a tecnologia é usada para simular divindades hindus. Sam, um antigo colonizador que se revolta contra os autodenominados 'deuses', tenta libertar a população oprimida usando sua tecnologia de renascimento e poderes psiônicos.",
+    "ano_publicacao": "1967",
+    "link_goodreads": "https://www.goodreads.com/book/show/13821.Lord_of_Light",
+    "tags": [
+      "ficção científica e fantasia",
+      "mitologia",
+      "colonização",
+      "religião"
+    ]
+  },
+  {
+    "titulo": "Cidade da Permutação",
+    "autor": "Greg Egan",
+    "sinopse": "Em um futuro onde a consciência pode ser digitalizada e executada como 'Cópias' virtuais, Paul Durham busca criar uma 'cidade' onde as Cópias possam existir permanentemente, explorando os limites da imortalidade e da simulação.",
+    "ano_publicacao": "1994",
+    "link_goodreads": "https://www.goodreads.com/book/show/285511.Permutation_City",
+    "tags": [
+      "ficção científica hard",
+      "imortalidade digital",
+      "consciência",
+      "realidade simulada"
+    ]
+  },
+  {
+    "titulo": "A Máquina do Tempo",
+    "autor": "H. G. Wells",
+    "sinopse": "Um cientista, conhecido apenas como o Viajante do Tempo, constrói uma máquina para visitar o ano 802.701, onde encontra a humanidade dividida entre os ingênuos e pacíficos Eloi e os brutais Morlocks que vivem no subsolo.",
+    "ano_publicacao": "1895",
+    "link_goodreads": "https://www.goodreads.com/book/show/2493.The_Time_Machine",
+    "citacao": "Não temos que aceitar o mundo como ele é. Podemos recriá-lo.",
+    "tags": [
+      "ficção científica clássica",
+      "viagem no tempo",
+      "evolução humana",
+      "distopia"
+    ]
+  },
+  {
+    "titulo": "2001: Uma Odisseia no Espaço",
+    "autor": "Arthur C. Clarke",
+    "sinopse": "Após a descoberta de um misterioso monólito alienígena enterrado na Lua, a tripulação da nave Discovery é enviada a Júpiter. A missão é posta em perigo pela inteligência artificial HAL 9000.",
+    "ano_publicacao": "1968",
+    "link_goodreads": "https://www.goodreads.com/book/show/709328.2001",
+    "citacao": "Sinto muito, Dave. Receio não poder fazer isso.",
+    "tags": [
+      "ficção científica hard",
+      "inteligência artificial",
+      "evolução",
+      "exploração espacial"
+    ]
+  },
+  {
+    "titulo": "Binti",
+    "autor": "Nnedi Okorafor",
+    "sinopse": "Binti é a primeira Himba a ser aceita na prestigiada universidade intergaláctica Oomza. No caminho, sua nave é atacada pela hostil raça alienígena Medusa, forçando-a a negociar a paz.",
+    "ano_publicacao": "2015",
+    "link_goodreads": "https://www.goodreads.com/book/show/25667925-binti",
+    "tags": [
+      "afrofuturismo",
+      "primeiro contato",
+      "novela",
+      "identidade"
+    ]
+  },
+  {
+    "titulo": "Guerra do Velho",
+    "autor": "John Scalzi",
+    "sinopse": "John Perry, um homem de 75 anos, se alista nas Forças de Defesa Coloniais para lutar em guerras interestelares, onde os corpos dos soldados são rejuvenescidos e a aposentadoria é trocada por combate.",
+    "ano_publicacao": "2005",
+    "link_goodreads": "https://www.goodreads.com/book/show/515366.Old_Man_s_War",
+    "tags": [
+      "ficção militar",
+      "ópera espacial",
+      "envelhecimento",
+      "transumanismo"
+    ]
+  },
+  {
+    "titulo": "Crianças do Tempo",
+    "autor": "Adrian Tchaikovsky",
+    "sinopse": "Em um futuro distante, os últimos remanescentes da humanidade encontram um planeta terraformado que deveria ser o seu novo lar, mas que agora é dominado por aranhas que foram evoluídas exponencialmente por um vírus experimental.",
+    "ano_publicacao": "2015",
+    "link_goodreads": "https://www.goodreads.com/book/show/28905335-children-of-time",
+    "tags": [
+      "ficção científica hard",
+      "evolução",
+      "terraformação",
+      "biologia"
+    ]
+  },
+  {
+    "titulo": "Nêmesis",
+    "autor": "Isaac Asimov",
+    "sinopse": "A humanidade está fugindo de uma Terra sobrepovoada, colonizando sistemas estelares próximos. Uma jovem geneticista, Marlene Fisher, descobre que a estrela Nemesis, orbitada por sua colônia, está prestes a se tornar uma supernova.",
+    "ano_publicacao": "1989",
+    "link_goodreads": "https://www.goodreads.com/book/show/539706.Nemesis",
+    "tags": [
+      "exploração espacial",
+      "ficção científica hard",
+      "colonização",
+      "relatividade"
+    ]
+  },
+  {
+    "titulo": "Pó de Estrelas (Star Dust)",
+    "autor": "Robert A. Heinlein",
+    "sinopse": "Kip Russell se alista na Força Espacial para pagar sua faculdade, mas se vê envolvido em uma missão perigosa de reconhecimento que o leva a confrontar a ameaça alienígena dos Vermin. (Nota: Título original 'Starship Troopers' é melhor para SF, mas usando a tradução mais genérica aqui para diversidade).",
+    "ano_publicacao": "1959",
+    "link_goodreads": "https://www.goodreads.com/book/show/17232.Starship_Troopers",
+    "tags": [
+      "ficção militar",
+      "sociedade",
+      "guerra interestelar",
+      "militarismo"
+    ]
+  },
+  {
+    "titulo": "O Mundo de Rochester (The Drowned World)",
+    "autor": "J. G. Ballard",
+    "sinopse": "Após o aumento das temperaturas globais derreter as calotas polares, a Terra é coberta por pântanos tropicais. O biólogo Robert Kerans é parte de uma expedição que observa a regressão da humanidade a estados psicológicos primitivos.",
+    "ano_publicacao": "1962",
+    "link_goodreads": "https://www.goodreads.com/book/show/543166.The_Drowned_World",
+    "tags": [
+      "ficção climática",
+      "catástrofe",
+      "psicologia",
+      "ficção científica new wave"
+    ]
+  },
+  {
+    "titulo": "O Problema dos Três Corpos",
+    "autor": "Liu Cixin",
+    "sinopse": "Durante a Revolução Cultural Chinesa, uma base militar secreta envia sinais ao espaço. Décadas depois, a humanidade descobre que atraiu a atenção de uma civilização alienígena à beira da extinção, desencadeando uma crise existencial global.",
+    "ano_publicacao": "2006",
+    "link_goodreads": "https://www.goodreads.com/book/show/20518872-o-problema-dos-tr-s-corpos",
+    "citacao": "Se eu destruir você, o que isso tem a ver com o resto do universo?",
+    "tags": [
+      "hard science fiction",
+      "primeiro contato",
+      "astronomia",
+      "ficção chinesa"
+    ]
+  },
+  {
+    "titulo": "Tropas Estelares",
+    "autor": "Robert A. Heinlein",
+    "sinopse": "Acompanha o recruta Juan 'Johnny' Rico em seu treinamento e serviço na Infantaria Móvel, um futuro onde apenas veteranos militares têm direito ao voto, enquanto a humanidade está em guerra contra insetos alienígenas conhecidos como Artrópodes.",
+    "ano_publicacao": "1959",
+    "link_goodreads": "https://www.goodreads.com/book/show/17214.Starship_Troopers",
+    "citacao": "A violência, a força bruta, resolveu mais questões na história do que qualquer outro fator.",
+    "tags": [
+      "ficção militar",
+      "futuro distópico",
+      "xenobiologia",
+      "ópera espacial"
+    ]
+  },
+  {
+    "titulo": "As Crônicas Marcianas",
+    "autor": "Ray Bradbury",
+    "sinopse": "Uma coleção de contos que narra a colonização de Marte pelos humanos que fogem de uma Terra devastada pela guerra nuclear, e os conflitos e encontros melancólicos com a civilização marciana nativa.",
+    "ano_publicacao": "1950",
+    "link_goodreads": "https://www.goodreads.com/book/show/24430589-as-cr-nicas-marcianas",
+    "tags": [
+      "ficção planetária",
+      "contos",
+      "melancolia",
+      "invasão"
+    ]
+  },
+  {
+    "titulo": "Solaris",
+    "autor": "Stanislaw Lem",
+    "sinopse": "O psicólogo Kris Kelvin é enviado a uma estação de pesquisa orbitando o planeta Solaris, cuja superfície é coberta por um oceano senciente que tem a capacidade de manifestar as memórias e culpas mais profundas dos cientistas.",
+    "ano_publicacao": "1961",
+    "link_goodreads": "https://www.goodreads.com/book/show/6211158-solaris",
+    "tags": [
+      "primeiro contato",
+      "ficção psicológica",
+      "mistério",
+      "hard science fiction"
+    ]
+  },
+  {
+    "titulo": "Piquenique na Estrada",
+    "autor": "Arkady e Boris Strugatsky",
+    "sinopse": "Após a visita alienígena, zonas proibidas conhecidas como Zonas de Visitação estão cheias de artefatos perigosos. Red Schuhart é um 'stalker' que se arrisca nessas Zonas para coletar tecnologia alienígena para venda no mercado negro.",
+    "ano_publicacao": "1972",
+    "link_goodreads": "https://www.goodreads.com/book/show/331256.Piquenique_na_Estrada",
+    "tags": [
+      "pós-apocalíptico",
+      "primeiro contato",
+      "realismo soviético",
+      "ficção social"
+    ]
+  },
+  {
+    "titulo": "As Sereias de Titã",
+    "autor": "Kurt Vonnegut",
+    "sinopse": "Um bilionário que pode viajar pelo espaço e no tempo por causa da sorte descobre que toda a história humana, incluindo a sua fortuna, é manipulada por uma civilização alienígena de Titã, que precisa de uma peça de reposição.",
+    "ano_publicacao": "1959",
+    "link_goodreads": "https://www.goodreads.com/book/show/71545.The_Sirens_of_Titan",
+    "tags": [
+      "ficção satírica",
+      "viagem espacial",
+      "existencialismo",
+      "metaficção"
+    ]
+  },
+  {
+    "titulo": "Nós",
+    "autor": "Yevgeny Zamyatin",
+    "sinopse": "O engenheiro D-503 vive no Estado Único, uma sociedade totalitária de vidro onde todos os aspectos da vida são rigidamente controlados pela Razão e pelo Benfeitor, até que ele se envolve com uma mulher que desafia as regras.",
+    "ano_publicacao": "1924",
+    "link_goodreads": "https://www.goodreads.com/book/show/76171.N_s",
+    "tags": [
+      "distopia",
+      "ficção política",
+      "precursor",
+      "totalitarismo"
+    ]
+  },
+  {
+    "titulo": "O Homem Demolido",
+    "autor": "Alfred Bester",
+    "sinopse": "Em um futuro onde a telepatia é comum e os 'Espers' (telepatas) auxiliam a polícia, Ben Reich, um magnata sem escrúpulos, planeja o assassinato perfeito, sabendo que precisa silenciar o único Esper capaz de provar sua culpa.",
+    "ano_publicacao": "1953",
+    "link_goodreads": "https://www.goodreads.com/book/show/76672.The_Demolished_Man",
+    "tags": [
+      "ficção noir",
+      "telepatia",
+      "futuro policial",
+      "cyberpunk"
+    ]
+  },
+  {
+    "titulo": "O Vidente",
+    "autor": "Philip K. Dick",
+    "sinopse": "Em um futuro próximo, a América perde a guerra contra as drogas. Bob Arctor, um policial infiltrado, consome a letal Substância D, enquanto monitora a si mesmo e tem que lidar com os efeitos devastadores da droga em sua identidade e percepção.",
+    "ano_publicacao": "1977",
+    "link_goodreads": "https://www.goodreads.com/book/show/143527.A_Scanner_Darkly",
+    "tags": [
+      "ficção psicológica",
+      "distopia",
+      "drogas",
+      "paranóia"
+    ]
+  },
+  {
+    "titulo": "Destino Estelar",
+    "autor": "Alfred Bester",
+    "sinopse": "Gully Foyle, um marinheiro espacial analfabeto e brutal, é abandonado à deriva após seu naufrágio. Consumido pela vingança contra a nave que o ignorou, ele se torna o homem mais procurado do universo enquanto tenta dominar a técnica de 'jaunting' (teletransporte mental).",
+    "ano_publicacao": "1956",
+    "link_goodreads": "https://www.goodreads.com/book/show/334264.The_Stars_My_Destination",
+    "tags": [
+      "ópera espacial",
+      "vingança",
+      "teletransporte",
+      "ficção de aventura"
+    ]
+  },
+  {
+    "titulo": "A Terra Moribunda",
+    "autor": "Jack Vance",
+    "sinopse": "Em um futuro distante, onde o Sol está morrendo e a Terra está envolvida por magia decadente e tecnologia esquecida, acompanhamos histórias interligadas de aventureiros, magos e criaturas bizarras em busca de poder e conhecimento.",
+    "ano_publicacao": "1950",
+    "link_goodreads": "https://www.goodreads.com/book/show/210335.The_Dying_Earth",
+    "tags": [
+      "ficção científica fantástica",
+      "futuro distante",
+      "fantasia científica",
+      "épico"
+    ]
+  },
+  {
+    "titulo": "Nova",
+    "autor": "Samuel R. Delany",
+    "sinopse": "O Capitão Lorq Von Ray comanda uma equipe de ciborgues e artistas em uma busca perigosa para obter o Ilírio, o material mais raro do universo, que só pode ser coletado nas proximidades de uma estrela prestes a se tornar uma nova.",
+    "ano_publicacao": "1968",
+    "link_goodreads": "https://www.goodreads.com/book/show/285579.Nova",
+    "tags": [
+      "ópera espacial",
+      "cibernética",
+      "viagem interestelar",
+      "ficção new wave"
+    ]
+  },
+  {
+    "titulo": "Stand on Zanzibar",
+    "autor": "John Brunner",
+    "sinopse": "Ambientado em 2010, um mundo superlotado com dez bilhões de pessoas, a história segue diversos personagens enquanto a sociedade lida com superpopulação, engenharia genética e o surgimento de novas tensões globais.",
+    "ano_publicacao": "1968",
+    "link_goodreads": "https://www.goodreads.com/book/show/4100987-stand-on-zanzibar",
+    "tags": [
+      "ficção social",
+      "distopia",
+      "superpopulação",
+      "futuro próximo"
+    ]
+  },
+  {
+    "titulo": "O Pássaro de Deus",
+    "autor": "Walter Tevis",
+    "sinopse": "Em uma sociedade onde a tecnologia avançou a ponto de a leitura ser esquecida e as pessoas serem controladas por máquinas de inteligência artificial, um professor descobre livros e tenta reintroduzir a literatura e o pensamento humano.",
+    "ano_publicacao": "1980",
+    "link_goodreads": "https://www.goodreads.com/book/show/26871.Mockingbird",
+    "tags": [
+      "distopia",
+      "inteligência artificial",
+      "isolamento social",
+      "futuro da educação"
+    ]
+  },
+  {
+    "titulo": "O Livro do Juízo Final",
+    "autor": "Connie Willis",
+    "sinopse": "Em 2054, uma estudante de Oxford viaja no tempo para estudar a Inglaterra medieval, mas um erro a deixa presa no ano de 1348, o auge da Peste Negra, enquanto uma pandemia moderna começa a se espalhar em seu próprio tempo.",
+    "ano_publicacao": "1992",
+    "link_goodreads": "https://www.goodreads.com/book/show/24983.Doomsday_Book",
+    "tags": [
+      "viagem no tempo",
+      "pandemia",
+      "ficção histórica",
+      "catástrofe"
+    ]
+  },
+  {
+    "titulo": "Gateway",
+    "autor": "Frederik Pohl",
+    "sinopse": "Robinette Broadhead, um garimpeiro espacial, explora um asteroide abandonado cheio de naves alienígenas que permitem viagens a locais desconhecidos, mas perigosos, uma loteria de morte ou riqueza para a humanidade.",
+    "ano_publicacao": "1977",
+    "link_goodreads": "https://www.goodreads.com/book/show/21842.Gateway",
+    "tags": [
+      "hard science fiction",
+      "exploração espacial",
+      "primeiro contato",
+      "psicologia"
+    ]
+  },
+  {
+    "titulo": "Guerra dos Mundos",
+    "autor": "H.G. Wells",
+    "sinopse": "A humanidade é confrontada por uma invasão devastadora de marcianos, que chegam à Terra em grandes cilindros e usam máquinas de guerra tripodes para destruir cidades e subjugar a população.",
+    "ano_publicacao": "1898",
+    "link_goodreads": "https://www.goodreads.com/book/show/8472.The_War_of_the_Worlds",
+    "tags": [
+      "proto-ficção científica",
+      "invasão alienígena",
+      "catástrofe",
+      "vitória biológica"
+    ]
+  },
+  {
+    "titulo": "Frankenstein",
+    "autor": "Mary Shelley",
+    "sinopse": "O cientista Victor Frankenstein busca o segredo da vida e cria uma criatura senciente e monstruosa a partir de partes humanas, rejeitando-a e causando uma tragédia de proporções épicas.",
+    "ano_publicacao": "1818",
+    "link_goodreads": "https://www.goodreads.com/book/show/18490.Frankenstein",
+    "tags": [
+      "proto-ficção científica",
+      "terror gótico",
+      "ética científica",
+      "criação de vida"
+    ]
+  },
+  {
+    "titulo": "O Jogo do Exterminador",
+    "autor": "Orson Scott Card",
+    "sinopse": "Para salvar a Terra de uma raça alienígena conhecida como 'Formics', o jovem e brilhante Ender Wiggin é levado a uma escola de combate espacial onde é treinado para se tornar o comandante militar supremo da humanidade.",
+    "ano_publicacao": "1985",
+    "link_goodreads": "https://www.goodreads.com/book/show/37580.O_Jogo_do_Exterminador",
+    "tags": [
+      "ficção militar",
+      "formação",
+      "primeiro contato",
+      "estratégia"
+    ]
+  },
+  {
+    "titulo": "Orador dos Mortos",
+    "autor": "Orson Scott Card",
+    "sinopse": "Sequência de 'O Jogo do Exterminador', onde Ender Wiggin assume o papel de Orador dos Mortos e viaja para um planeta recém-colonizado, onde precisa investigar o estranho ciclo de vida dos 'Piggies', uma espécie alienígena única e letal.",
+    "ano_publicacao": "1986",
+    "link_goodreads": "https://www.goodreads.com/book/show/7967.Orador_dos_Mortos",
+    "tags": [
+      "xenocídio",
+      "ética",
+      "primeiro contato",
+      "filosofia"
+    ]
+  },
+  {
+    "titulo": "O Despertar do Leviatã",
+    "autor": "James S.A. Corey",
+    "sinopse": "No futuro, quando o Sistema Solar está colonizado, a tensão entre Terra, Marte e o Cinturão de Asteroides é alta. A história segue o detetive Miller e o oficial Jim Holden enquanto investigam o desaparecimento de uma jovem e descobrem uma conspiração galáctica.",
+    "ano_publicacao": "2011",
+    "link_goodreads": "https://www.goodreads.com/book/show/8855321-leviathan-wakes",
+    "tags": [
+      "ópera espacial",
+      "thriller político",
+      "primeiro contato",
+      "investigação"
+    ]
+  },
+  {
+    "titulo": "As Estrelas Calculadas",
+    "autor": "Mary Robinette Kowal",
+    "sinopse": "Em 1952, um meteoro atinge a Terra, causando uma catástrofe climática que acelera a necessidade da humanidade de colonizar o espaço. A ex-piloto Elma York luta contra o machismo da época para se tornar uma das primeiras astronautas.",
+    "ano_publicacao": "2018",
+    "link_goodreads": "https://www.goodreads.com/book/show/33058012-the-calculating-stars",
+    "tags": [
+      "história alternativa",
+      "corrida espacial",
+      "ficção feminista",
+      "catástrofe"
+    ]
+  },
+  {
+    "titulo": "Um Fogo Sobre o Abismo",
+    "autor": "Vernor Vinge",
+    "sinopse": "O universo é dividido em 'Zonas' onde as leis da física e da inteligência são diferentes. Uma expedição humana desenterra um poder maligno na Zona Fora do Alcance e a última esperança da galáxia repousa sobre duas crianças perdidas.",
+    "ano_publicacao": "1992",
+    "link_goodreads": "https://www.goodreads.com/book/show/777170.A_Fire_Upon_the_Deep",
+    "tags": [
+      "hard science fiction",
+      "ópera espacial",
+      "inteligência artificial",
+      "viagem mais rápida que a luz"
+    ]
+  },
+  {
+    "titulo": "A Estação Perdido",
+    "autor": "China Miéville",
+    "sinopse": "Na metrópole de Nova Crobuzon, um cientista renegado tenta restaurar as asas de um garuda, mas acaba liberando uma praga de traças multidimensionais que se alimentam de mentes e consciências.",
+    "ano_publicacao": "2000",
+    "link_goodreads": "https://www.goodreads.com/book/show/68338.Perdido_Street_Station",
+    "tags": [
+      "new weird",
+      "steampunk",
+      "ficção biológica",
+      "metrópole distópica"
+    ]
+  },
+  {
+    "titulo": "Gideon a Nona",
+    "autor": "Tamsyn Muir",
+    "sinopse": "Gideon, uma serva rebelde, é forçada a se passar pela cavalheira da Nona Casa (o lar dos necromantes) e acompanhar a herdeira Harrowhark Nonagesimus em uma competição mortal de intelecto e esgrima na Primeira Casa do Imperador Imortal.",
+    "ano_publicacao": "2019",
+    "link_goodreads": "https://www.goodreads.com/book/show/42036538-gideon-the-ninth",
+    "tags": [
+      "ficção científica fantástica",
+      "necromancia espacial",
+      "ópera espacial",
+      "fantasia gótica"
+    ]
+  }
+]
