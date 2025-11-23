@@ -4,9 +4,7 @@
 
 Uma aplicação web interativa para explorar uma coleção curada de livros clássicos e modernos de ficção científica. A interface permite que os usuários descubram novas leituras através de um carrossel de citações e uma funcionalidade de busca dinâmica.
 
-<!-- Adicione um screenshot da sua aplicação aqui -->
-
-![Screenshot da Aplicação](img/Captura-de-tela.jpeg)
+<video src="img/video.mp4" width="100%" autoplay muted loop></video>
 
 ## ✨ Funcionalidades
 
@@ -34,6 +32,7 @@ O projeto foi construído utilizando as seguintes tecnologias:
 ├── style.css         # Folha de estilos para a aplicação.
 └── img/
     └── logo.svg      # Ícone do logo da aplicação.
+    └── video.mp4      #video de apresentação.
 ```
 
 ## ⚙️ Como Executar
@@ -42,7 +41,7 @@ Como este é um projeto front-end puro, você não precisa de um servidor comple
 
 1. Clone este repositório:
    ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/DrySiqu3ira/Sci-Fi-Reads.git
    ```
 2. Navegue até o diretório do projeto:
    ```sh
@@ -56,9 +55,9 @@ E pronto! A aplicação estará funcionando localmente.
 
 Criado por **Adrienne Siqueira**.
 
-- **LinkedIn**: @adrienne-siqueira
-- **GitHub**: @DrySiqu3ira
-- **Instagram**: @drysiqu3ira
+- **LinkedIn**: https://www.linkedin.com/in/adrienne-siqueira
+- **GitHub**: https://github.com/DrySiqu3ira
+- **Instagram**: https://www.instagram.com/drysiqu3ira
 
 ## 📄 Licença
 
@@ -67,10 +66,3 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 ---
 
 _Este projeto foi desenvolvido como parte da Imersão da Alura._
-
-nome do repositorio: Sci-Fi-Reads
-img\Captura-de-tela.jpeg
-
-img\video.mp4
-
-https://github.com/DrySiqu3ira
