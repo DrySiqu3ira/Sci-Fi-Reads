@@ -55,9 +55,8 @@ E pronto! A aplicação estará funcionando localmente.
 
 Criado por **Adrienne Siqueira**.
 
-- **LinkedIn**: https://www.linkedin.com/in/adrienne-siqueira
-- **GitHub**: https://github.com/DrySiqu3ira
-- **Instagram**: https://www.instagram.com/drysiqu3ira
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrienne-siqueira/) 
+[![Instagram](https://img.shields.io/badge/-Instagram-E1306C?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/drysiqu3ira/) 
 
 ## 📄 Licença
 
@@ -66,3 +65,4 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 ---
 
 _Este projeto foi desenvolvido como parte da Imersão da Alura._
+
